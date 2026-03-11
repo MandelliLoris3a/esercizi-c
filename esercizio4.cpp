@@ -3,9 +3,11 @@
 using namespace std;
 int main(){
 int a;
-using namespace std;
-cout << "Inserisci un numeri: ";
+cout << "Inserisci un numero: " << endl;
 cin >> a;
-while (a<10){a=a+1;
-cout << a << endl;
-}}
+int totale = 1;
+while (a>1){totale = totale * a;
+a--;}
+cout << totale ;
+return 0;
+}

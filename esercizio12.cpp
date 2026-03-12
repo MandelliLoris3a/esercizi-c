@@ -3,5 +3,29 @@
 #include <string> 
 using namespace std;
 int main(){
-    int
-}
+    int km;
+    string veicolo, carburante;
+    char scelta;
+    do{
+    cout << "inserisci veicolo (auto o moto)" << endl;
+    cin >> veicolo;
+    cout << "inserisci carburante (benzina, diesel, elettrico)" << endl;
+    cin >> carburante;
+    cout << "inserisci km" << endl;
+    cin >> km;
+    cout << "vuoi inserire un altro veicolo? (s/n)" << endl;
+    cin >> scelta;
+    }while(scelta=='s');
+    if(veicolo=="auto" && carburante=="benzina"){
+        cout << "costo: " << km*0.15 << endl;
+    } else if(veicolo=="auto" && carburante=="diesel"){
+        cout << "costo: " << km*0.13 << endl;
+    } else if(veicolo=="auto" && carburante=="elettrico"){
+        cout << "costo: " << km*0.08 << endl;
+    } else if(veicolo=="moto" && carburante=="benzina"){
+        cout << "costo: " << km*0.07 << endl;
+    } else if(veicolo=="moto" && carburante=="elettrico"){
+        cout << "costo: " << km*0.04 << endl;
+    } else {
+        cout << "combinazione veicolo-carburante non valida" << endl;
+    }

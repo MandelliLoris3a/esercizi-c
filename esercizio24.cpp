@@ -1,4 +1,4 @@
-//Genera un vettore di 10 numeri casuali tra 1 e 50 e trova il massimo e la sua posizione
+// marzo 13/03
 #include <iostream>
 #include <string> 
 #include <cstdlib> 
@@ -9,11 +9,12 @@ int main(){srand(time(NULL));
 int n=10,max=0;
 int j,i;
 int vet[n];
+int vet2[n];
 for( i=0;i<n;i++){
     vet[i]=rand()%50+1;
-    if(max<vet[i]){max=vet[i];j=i;}
+    cout << vet[i] << "   ";}
     
-    
-} 
-cout << "il numero più grande è : " << max << " e si trova in posizione : " << j << endl;
-}
+for( i=0;i<n;i++){
+    vet2[i]=vet[n-1-i];
+    cout << vet2[i] << "       ";
+}}
